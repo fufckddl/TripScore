@@ -28,7 +28,7 @@ public class SecurityConfig {
                                 "/css/**",
                                 "/js/**").permitAll() //permitALL()전부 허용
                         //누구나 접근불가
-                        .requestMatchers("/map/**", "/post/**").authenticated() //로그인한 사람만 접근 허용
+                        .requestMatchers("/map/**", "/post/**", "/user/edit/**", "/user/profile").authenticated() //로그인한 사람만 접근 허용
                         .anyRequest().permitAll() //그 외(위에 3개 제외)는 전부 허용한다는 뜻
                 )
                 //.csrf(csrf-> csrf.disable()) => 보안과 관련된 것, 내가 아닌 다른 사람이 내 이름으로 요청을 보내는 것을 차단(disable)함
@@ -54,4 +54,5 @@ public class SecurityConfig {
                 );
         return http.build();
     }
+
 }
