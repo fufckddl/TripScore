@@ -15,7 +15,7 @@ public class PostImg {
     private Long id;
 
     @Column(nullable = false)
-    private String url;
+    private String url; //이미지 url
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

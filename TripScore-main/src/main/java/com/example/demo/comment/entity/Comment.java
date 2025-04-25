@@ -1,7 +1,8 @@
 package com.example.demo.comment.entity;
 
-import com.example.demo.post.entity.Post;
+import com.example.demo.post.entitiy.Post;
 import com.example.demo.user.entity.SiteUser;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
